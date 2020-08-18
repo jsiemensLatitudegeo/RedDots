@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:esriUI="clr-namespace:Esri.ArcGISRuntime.Xamarin.Forms;assembly=Esri.ArcGISRuntime.Xamarin.Forms"
+             x:Class="RedDots.MainPage">
+
+    <StackLayout Orientation="Horizontal">
+        <StackLayout WidthRequest="300" Margin="15">
+            <Label Text="Step 1."/>
+            <Button x:Name="DownloadButton" Text="Download Data" Clicked="DownloadButton_Clicked"/>
+            <Label x:Name="OnDemandStatusLabel"/>
+            <Label x:Name="PreplannedStatusLabel"/>
+            <Label Text="Step 2."/>
+            <Button x:Name="OnlineMapButton" Text="Activate Online Map" IsEnabled="False" Clicked="OnlineMapButton_Clicked"/>
+            <Button x:Name="OnDemandMapButton" Text="Activate On Demand Map" IsEnabled="False" Clicked="OnDemandMapButton_Clicked"/>
+            <Button x:Name="PreplannedMapButton" Text="Activate Preplanned Map" IsEnabled="False" Clicked="PreplannedMapButton_Clicked"/>
+            <Button x:Name="CycleActivateButton" Text="Cycle Activation" IsEnabled="False" Clicked="CycleActivateButton_Clicked"/>
+        </StackLayout>
+        <esriUI:MapView x:Name="TheMap" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+    </StackLayout>
+
+</ContentPage>
